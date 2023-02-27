@@ -11,7 +11,7 @@ function Header({text}) {
 }
 
 Header.defaultProps = {
-    text: "Damn guys!!"
+    text: "Please rate your experience"
 }
 
 Header.propTypes = {

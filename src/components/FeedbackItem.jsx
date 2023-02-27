@@ -1,12 +1,17 @@
+import {FaTimes} from 'react-icons/fa'
+import Card from "./shared/Card"
 
 
-function FeedbackItem() {
+function FeedbackItem({item, handleDelete}) { 
+ 
   return (
-    <div className="card">
-        <div className="num-display">10</div>
-        <div className="text-display">This is an example of a feedback item</div>
-    </div>
+    <Card >
+        <div className="num-display">{item.rating}</div>
+        <button onClick={()=>handleDelete(item.id)} className="close"><FaTimes color='purple'/></button>
+        <div className="text-display">{item.text}</div>
+    </Card>
   )
 }
+
 
 export default FeedbackItem
